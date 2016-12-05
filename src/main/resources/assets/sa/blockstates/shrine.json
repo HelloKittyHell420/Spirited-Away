@@ -1,0 +1,8 @@
+{
+    "variants": {
+	    "facing=west":  { "model": "sa:shrine"},
+        "facing=north": { "model": "sa:shrine", "y": 90 },
+		"facing=east":  { "model": "sa:shrine", "y": 180 },
+        "facing=south": { "model": "sa:shrine", "y": 270 }
+    }
+}

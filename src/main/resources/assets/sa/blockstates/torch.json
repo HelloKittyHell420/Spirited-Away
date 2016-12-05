@@ -1,0 +1,9 @@
+{
+    "variants": {
+        "facing=up": { "model": "sa:normal_torch" },
+        "facing=east": { "model": "sa:normal_torch_wall" },
+        "facing=south": { "model": "sa:normal_torch_wall", "y": 90 },
+        "facing=west": { "model": "sa:normal_torch_wall", "y": 180 },
+        "facing=north": { "model": "sa:normal_torch_wall", "y": 270 }
+    }
+}

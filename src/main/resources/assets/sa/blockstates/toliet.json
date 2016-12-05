@@ -1,0 +1,8 @@
+{
+    "variants": {
+	    "facing=west":  { "model": "sa:toliet" },
+        "facing=east":  { "model": "sa:toliet", "y": 180 },
+        "facing=north": { "model": "sa:toliet", "y": 90},
+        "facing=south": { "model": "sa:toliet", "y": 270}
+    }
+}

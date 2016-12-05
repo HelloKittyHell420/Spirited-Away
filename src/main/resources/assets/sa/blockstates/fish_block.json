@@ -1,0 +1,8 @@
+{
+    "variants": {
+        "axis=y":    { "model": "sa:fish_block" },
+        "axis=z":     { "model": "sa:fish_block", "x": 90 },
+        "axis=x":     { "model": "sa:fish_block", "x": 90, "y": 90 },
+        "axis=none":   { "model": "sa:fish_block" }
+    }
+}

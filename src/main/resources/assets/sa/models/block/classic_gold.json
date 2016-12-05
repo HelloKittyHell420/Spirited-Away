@@ -1,0 +1,12 @@
+{
+	"parent": "block/cube",
+	"textures": {	
+		"particle": "sa:blocks/classicGold",
+        "up": "sa:blocks/classicGold_top",
+        "down": "sa:blocks/classicGold_bottom",
+		"north": "sa:blocks/classicGold",
+        "east": "sa:blocks/classicGold",
+        "south": "sa:blocks/classicGold",
+        "west": "sa:blocks/classicGold"
+	}
+}

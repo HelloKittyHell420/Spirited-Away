@@ -1,0 +1,6 @@
+{
+    "parent": "block/cross",
+    "textures": {
+        "cross": "sa:blocks/flower_konjac"
+    }
+}

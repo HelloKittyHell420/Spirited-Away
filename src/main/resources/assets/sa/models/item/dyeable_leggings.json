@@ -1,0 +1,7 @@
+{
+    "parent": "item/generated",
+    "textures": {
+        "layer0": "sa:items/dyeable_leggings",
+        "layer1": "sa:items/dyeable_leggings_overlay"
+    }
+}

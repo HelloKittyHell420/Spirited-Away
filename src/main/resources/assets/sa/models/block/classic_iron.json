@@ -1,0 +1,12 @@
+{
+	"parent": "block/cube",
+	"textures": {	
+		"particle": "sa:blocks/classicIron",
+        "up": "sa:blocks/classicIron_top",
+        "down": "sa:blocks/classicIron_bottom",
+		"north": "sa:blocks/classicIron",
+        "east": "sa:blocks/classicIron",
+        "south": "sa:blocks/classicIron",
+        "west": "sa:blocks/classicIron"
+	}
+}

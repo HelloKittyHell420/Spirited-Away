@@ -1,0 +1,8 @@
+{
+    "variants": {
+        "variant=sakura": { "model": "sa:planks_sakura" },
+		"variant=wisteria": { "model": "sa:planks_wisteria" },
+		"variant=winter_sweet": { "model": "sa:planks_winter_sweet" },
+		"variant=acer_palmatum": { "model": "sa:planks_acer_palmatum" }
+    }
+}

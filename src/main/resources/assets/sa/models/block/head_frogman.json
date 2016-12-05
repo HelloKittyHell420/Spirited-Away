@@ -1,0 +1,27 @@
+{
+"__comment": "Coded by AquaBarnes, Textures by Alanbeaker with BDcraft Cubik - http://bdcraft.net",
+    "textures": {
+        "particle": "sa:blocks/head_test",
+        "0": "sa:blocks/head_test",
+        "1": "sa:blocks/head_test",
+        "2": "sa:blocks/head_test",
+        "3": "sa:blocks/head_test",
+        "4": "sa:blocks/head_test",
+        "5": "sa:blocks/head_test"
+    },
+    "elements": [
+        {
+            "name": "Head",
+            "from": [ 4.0, 0.0, 4.0 ], 
+            "to": [ 12.0, 8.0, 12.0 ], 
+            "faces": {
+                "north": { "texture": "#0", "uv": [ 0.0, 0.0, 16.0, 16.0 ] },
+                "east": { "texture": "#1", "uv": [ 0.0, 0.0, 16.0, 16.0 ] },
+                "south": { "texture": "#2", "uv": [ 0.0, 0.0, 16.0, 16.0 ] },
+                "west": { "texture": "#3", "uv": [ 0.0, 0.0, 16.0, 16.0 ] },
+                "up": { "texture": "#4", "uv": [ 0.0, 0.0, 16.0, 16.0 ] },
+                "down": { "texture": "#5", "uv": [ 0.0, 0.0, 16.0, 16.0 ] }
+            }
+        }
+    ]
+}

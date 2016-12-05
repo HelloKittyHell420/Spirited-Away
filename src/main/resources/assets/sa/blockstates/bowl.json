@@ -1,0 +1,32 @@
+{
+    "variants": {
+        "color=white,food=empty": { "model": "sa:bowl_white_empty" },
+		"color=white,food=mushroom_stew": { "model": "sa:bowl_white_mushroom" },
+		"color=white,food=beetroot_soup": { "model": "sa:bowl_white_empty" },
+		"color=white,food=rabbit_stew": { "model": "sa:bowl_white_empty" },
+        "color=orange,food=empty": { "model": "sa:bowl_orange_empty" },
+		"color=orange,food=mushroom_stew": { "model": "sa:bowl_orange_empty" },
+		"color=orange,food=beetroot_soup": { "model": "sa:bowl_orange_empty" },
+		"color=orange,food=rabbit_stew": { "model": "sa:bowl_orange_empty" },
+		"color=magenta,food=empty": { "model": "sa:bowl_magenta_empty" },
+		"color=magenta,food=mushroom_stew": { "model": "sa:bowl_magenta_empty" },
+		"color=magenta,food=beetroot_soup": { "model": "sa:bowl_magenta_empty" },
+		"color=magenta,food=rabbit_stew": { "model": "sa:bowl_magenta_empty" },
+		"color=light_blue": { "model": "sa:bowl_white_empty" },
+		"color=yellow,food=empty": { "model": "sa:bowl_yellow_empty" },
+		"color=yellow,food=mushroom_stew": { "model": "sa:bowl_yellow_empty" },
+		"color=yellow,food=beetroot_soup": { "model": "sa:bowl_yellow_empty" },
+		"color=yellow,food=rabbit_stew": { "model": "sa:bowl_yellow_empty" },
+		"color=lime": { "model": "sa:bowl_lime_empty" },
+		"color=pink": { "model": "sa:bowl_white_empty" },
+		"color=gray": { "model": "sa:bowl_gray_empty" },
+		"color=silver": { "model": "sa:bowl_white_empty" },
+		"color=cyan": { "model": "sa:bowl_cyan_mushroom" },
+		"color=purple": { "model": "sa:bowl_purple_empty" },
+		"color=blue": { "model": "sa:bowl_blue_empty" },
+		"color=brown": { "model": "sa:bowl_white_empty" },
+		"color=green": { "model": "sa:bowl_white_empty" },
+		"color=red": { "model": "sa:bowl_white_empty" },
+		"color=black": { "model": "sa:bowl_white_empty" }
+    }
+}

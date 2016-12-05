@@ -1,0 +1,152 @@
+#Achievement Names
+achievement.sa_install=Spirited Away Mod Installed!
+achievement.sa_install.desc=Thank you for installing AquaBarnes Spirited Away Mod!
+
+#Item Names
+item.AquaBarnes.name=§AquaBarnes§
+item.bed_white.name=Bed White
+item.bed_orange.name=Bed Orange
+item.bed_magenta.name=Bed Magenta
+item.bed_lightblue.name=Bed Light Blue
+item.bed_yellow.name=Bed Yellow
+item.bed_lime.name=Bed Lime
+item.bed_pink.name=Bed Pink
+item.bed_gray.name=Bed Gray
+item.bed_lightgray.name=Bed Light Gray
+item.bed_cyan.name=Bed Cyan
+item.bed_purple.name=Bed Purple
+item.bed_blue.name=Bed Blue
+item.bed_brown.name=Bed Brown
+item.bed_green.name=Bed Green
+item.bed_black.name=Bed Black
+-Elytras
+item.elytra_radish.name=Elytra Radish
+item.elytra_kashira.name=Elytra Kashira
+item.elytra_sootball.name=Elytra Sootball
+-Armor
+item.dyeable_chestplate.name=Dyeable Chestplate
+item.dyeable_leggings.name=Dyeable Leggings
+item.haku_chestplate.name=Haku Chestplate
+item.haku_leggings.name=Haku Leggings
+item.chihiro_chestplate.name=Chihiro Chestplate
+item.chihiro_leggings.name=Chihiro Leggings
+-Hats and Masks
+item.dyeablehat.name=Dyeable Hat
+item.frogman.name=Frogman's Hat
+item.radishhat.name=Radish's Hat
+item.noface_mask.name=No-Face Mask 
+
+#Block Names
+tile.Portal.name=Portal
+-Heads
+tile.skull.chihiro.name=Chihiro-Ogino Head
+tile.skull.frogman.name=Frogman Head
+tile.skull.haku.name=Haku Head
+tile.skull.kashira.name=Kashira Head
+tile.skull.ootori.name=Ootori-Sami Head
+tile.skull.radish.name=Radish Head
+tile.skull.sootball.name=Sootball Head
+tile.skull.haku_dragon.name=Haku Dragon Head
+-Classic
+tile.classic_brick.name=Classic Brick
+tile.classic_gravel.name=Classic Gravel
+tile.classic_cobblestone.name=Classic Cobblestone
+tile.classic_mossy_cobblestone.name= Classic Moss Stone
+tile.classic_gold.name=Classic Gold
+tile.classic_iron.name=Classic Iron 
+tile.classic_leaves.name=Classic Leaves 
+-Leaves
+tile.LeavesWinterSweet.name= Winter Sweet Leaves
+tile.LeavesAcerPalmatum.name= Acer Palmatum Leaves
+tile.LeavesWisteria.name= Wisteria Leaves
+tile.LeavesSakura.name= Sakura Leaves
+tile.wooden_basin.name=Basin
+tile.shrine.name=Shrine
+tile.pump.name=Pump
+tile.chopstick_cup.name=Chopstick Cup
+tile.sushi_plate.name=Sushi Plate
+tile.fish_block.name=Fish Block
+tile.crafting_table.name=Crafting Table
+tile.furnace.name=Furnace
+-PressurePlates
+tile.sakura_pressure_plate.name=Sakura Pressure Plate
+tile.wisteria_pressure_plate.name=Wisteria Pressure Plate
+tile.acer_palmatum_pressure_plate.name=Acer Palmatum Pressure Plate
+tile.winter_sweet_pressure_plate.name=Winter Sweet Pressure Plate
+-WoodPlanks
+tile.planks.sakura.name=Sakura Wood Planks
+tile.planks.wisteria.name=Wisteria Wood Planks
+tile.planks.acerpalmatum.name=Acer Palmatum Wood Planks
+tile.planks.wintersweet.name=Winter Sweet Wood Planks
+-Fence's/Gates
+tile.sakura_fence.name=Sakura Fence
+tile.wisteria_fence.name=Wisteria Fence
+tile.acer_palmatum_fence.name=Acer Palmatum Fence
+tile.winter_sweet_fence.name=Winter Sweet Fence
+tile.sakura_fence_gate.name=Sakura Fence Gate
+tile.wisteria_fence_gate.name=Wisteria Fence Gate
+tile.acer_palmatum_fence_gate.name=Acer Palmatum Fence Gate
+tile.winter_sweet_fence_gate.name=Winter Sweet Fence Gate
+-Tree's
+tile.sapling.sakura.name=Sakura Sapling
+tile.sapling.wisteria.name=Wisteria Sapling
+tile.sapling.acerpalmatum.name= Acer Palmatum Sapling
+tile.sapling.wintersweet.name=Winter Sweet Sapling
+-Bowl's
+tile.bowl.white.name=White Bowl
+tile.bowl.orange.name=Orange Bowl
+tile.bowl.magenta.name=Magenta Bowl
+tile.bowl.light_blue.name=Light Blue Bowl
+tile.bowl.yellow.name=Yellow Bowl
+tile.bowl.orange.name=Orange Bowl
+tile.bowl.orange.name=Orange Bowl
+tile.bowl.orange.name=Orange Bowl
+tile.bowl.orange.name=Orange Bowl
+
+tile.toliet.name=Toliet
+tile.sink.name=Sink
+
+#Entity Names
+entity.SA.Akiichiro.name=Akiichiro Ogino
+entity.SA.Boh.name=Boh (Big Baby)
+entity.SA.Chihiro.name=Chihiro Ogino (Sen)
+entity.SA.Frogman.name=Frogman
+entity.SA.Kamaji.name=Kamaji
+entity.SA.Kashira.name=Kashira
+entity.SA.Kasuga.name=Kasuga
+entity.SA.Lin.name=Lin
+entity.SA.NoFace.name=No-Face
+entity.SA.Ootori.name=Ootori-Sami
+entity.SA.Radish.name=Radish
+entity.SA.Shikigami.name=Shikigami
+entity.SA.Sootball.name=Sootball
+entity.SA.HakuHuman.name=Haku 
+entity.SA.HakuDragon.name=Haku Dragon
+entity.SA.Ushi.name=Ushi
+entity.SA.Yubaba.name=Yubaba
+entity.SA.Yuko.name=Yuko Ogino
+entity.SA.Zenbia.name=Zenbia
+
+#Creative Tabs
+itemGroup.SABlocksTab=SA: Building Blocks
+itemGroup.SADecorationsTab=SA: Decorations Blocks
+itemGroup.SATransportationTab=SA: Transportation 
+itemGroup.SAFoodTab=SA: Foods
+itemGroup.SAToolsTab=SA: Tools
+itemGroup.SACombatTab=SA: Combat
+itemGroup.SAMaterialsTab=SA: Materials
+
+#Commands
+commands.dye.success=Armor Dye
+commands.dye.failed=Unable to Dye
+commands.dye.usage=/dye [colorValue]
+commands.dye.usage.error=That is not a valid Color Value: 
+
+#Category
+category.spiritedaway=Spirited Away
+
+#Keys
+key.ascend=Ascending!
+key.descend=Descending!
+
+

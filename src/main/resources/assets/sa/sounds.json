@@ -1,0 +1,10 @@
+{
+	"entity.sootball.ambient" : {
+		"category" : "neutral",
+		"sounds" : [
+		{
+			"name": "sa:/entity/sootball/entity_sootball_ambient"
+	    }
+		]
+	}
+}
