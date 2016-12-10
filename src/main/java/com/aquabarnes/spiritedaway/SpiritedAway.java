@@ -155,9 +155,9 @@ public class SpiritedAway
 	SAItemBlocks.init();
 	//TODO: LOOKUP
 	//SAPotions.init();
-    SAEntities.init();
+    //SAEntities.init();
 	//SATileEntites.init();
-    SARecipes.init();
+    //SARecipes.init();
     //SASchematics.init();
     SAAchievementPage.init();
     //SAWorldGenerator.init(); LOOKUP
@@ -165,7 +165,7 @@ public class SpiritedAway
     
     //SADimension.init();
     
-    proxy.registerEntityRenderers();
+    //proxy.registerEntityRenderers();
     proxy.registerModelBakeryStuff();
     //proxy.registerTileSpecialRenderers(); 
   }

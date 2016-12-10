@@ -1,0 +1,16 @@
+{
+	"variants": {
+		"variant=sakura": {
+			"model": "sa:leaves/sakura_leaves"
+		},
+		"variant=wisteria": {
+			"model": "sa:leaves/wisteria_leaves"
+		},
+		"variant=winter_sweet": {
+			"model": "sa:leaves/winter_sweet_leaves"
+		},
+		"variant=acer_palmatum": {
+			"model": "sa:leaves/acer_palmatum_leaves"
+		}
+	}
+}

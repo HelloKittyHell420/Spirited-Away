@@ -1,8 +1,16 @@
 {
-    "variants": {
-        "variant=sakura": { "model": "sa:planks_sakura" },
-		"variant=wisteria": { "model": "sa:planks_wisteria" },
-		"variant=winter_sweet": { "model": "sa:planks_winter_sweet" },
-		"variant=acer_palmatum": { "model": "sa:planks_acer_palmatum" }
-    }
+	"variants": {
+		"variant=sakura": {
+			"model": "sa:planks/sakura_planks"
+		},
+		"variant=wisteria": {
+			"model": "sa:planks/wisteria_planks"
+		},
+		"variant=winter_sweet": {
+			"model": "sa:planks/winter_sweet_planks"
+		},
+		"variant=acer_palmatum": {
+			"model": "sa:planks/acer_palmatum_planks"
+		}
+	}
 }

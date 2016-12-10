@@ -5,6 +5,7 @@ import com.aquabarnes.spiritedaway.SpiritedAway;
 
 
 
+
 import com.aquabarnes.spiritedaway.block.BlockBasin;
 import com.aquabarnes.spiritedaway.block.BlockChair;
 import com.aquabarnes.spiritedaway.block.BlockChopstick;
@@ -30,7 +31,6 @@ import com.aquabarnes.spiritedaway.block.BlockWorkbench;
 
 import com.aquabarnes.spiritedaway.block.SABlockDoor;
 import com.aquabarnes.spiritedaway.block.SABlockFlower;
-import com.aquabarnes.spiritedaway.block.SABlockRice;
 import com.aquabarnes.spiritedaway.block.SABlockShoes;
 import com.aquabarnes.spiritedaway.tileenitity.TileEntityFurnace;
 import com.aquabarnes.spiritedaway.tileenitity.TileEntitySkull;
