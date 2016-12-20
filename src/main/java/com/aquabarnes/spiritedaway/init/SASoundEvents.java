@@ -8,8 +8,9 @@ import net.minecraftforge.fml.common.registry.GameRegistry;
 
 public class SASoundEvents {
 
-public static SoundEvent record_;
+public static SoundEvent pogo_bigger_blue;
 public static SoundEvent dragon_boy;
+public static SoundEvent dragon_boy2;
 public static SoundEvent one_summers_day;
 public static SoundEvent always_with_me;
 
@@ -18,8 +19,9 @@ public static SoundEvent sootball_hurt;
 
 public static void initialization()
 {
-  record_ = register(SpiritedAway.getResource("records.sa"));
+  pogo_bigger_blue = register(SpiritedAway.getResource("records.pogo_bigger_blue"));
   dragon_boy = register(SpiritedAway.getResource("records.dragon_boy"));
+  dragon_boy2 = register(SpiritedAway.getResource("records.dragon_boy2"));
   one_summers_day = register(SpiritedAway.getResource("records.one_summers_day"));
   always_with_me = register(SpiritedAway.getResource("records.always_with_me"));
   

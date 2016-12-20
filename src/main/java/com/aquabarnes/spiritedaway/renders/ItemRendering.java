@@ -17,8 +17,9 @@ public class ItemRendering
 {
   public static void initialize()
   {
-    register(SAItems.RECORD_, "record_");
+    register(SAItems.pogo_bigger_blue, "record_pogo_bigger_blue");
     register(SAItems.dragon_boy, "record_dragon_boy");
+    register(SAItems.dragon_boy, "record_dragon_boy2");
     register(SAItems.one_summers_day, "record_one_summers_day");
     register(SAItems.always_with_me, "record_always_with_me");
   }

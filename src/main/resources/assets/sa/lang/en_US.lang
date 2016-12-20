@@ -36,10 +36,12 @@ item.frogman.name=Frogman's Hat
 item.radishhat.name=Radish's Hat
 item.noface_mask.name=No-Face Mask 
 -Records
-item.record_.name=Spirited Away - Music Disk
-item.record_dragon_boy.name=Spirited Away - Music Disk
-item.record_one_summers_day.name=Spirited Away - Music Disk
-item.record_always_with_me.name=Spirited Away - Music Disk
+item.record_pogo_bigger_blue.name=Spirited Away - Music Disk - Goldpikpikcarrots
+item.record_dragon_boy.name=Spirited Away - Music Disk - DJVexa  
+item.record_dragon_boy2.name=Spirited Away - Music Disk - Rozu Remix 
+item.record_one_summers_day.name=Spirited Away - Music Disk - Alex Birch
+item.record_always_with_me.name=Spirited Away - Music Disk - SweetYoko22
+
 
 #Block Names
 tile.Portal.name=Portal

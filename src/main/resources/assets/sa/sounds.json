@@ -1,9 +1,27 @@
 {
-  "records.dragon_boy": {
+  "records.pogo_bigger_blue": {
 	"category": "music",
 	"sounds":[
 	  {
+	    "name": "sa:records/pogo_bigger_blue",
+	    "stream": true
+	  }
+	]
+  },
+  "records.dragon_boy": {
+	"category": "music",
+	"sounds": [
+	  {
 	    "name": "sa:records/dragon_boy",
+	    "stream": true
+	  }
+	]
+  },
+  "records.dragon_boy2": {
+  	"category": "music",
+	"sounds": [
+	  {
+	    "name": "sa:records/dragon_boy2",
 	    "stream": true
 	  }
 	]
@@ -18,7 +36,7 @@
 	]
   },
   "records.always_with_me": {
-  	"category": "music",
+	"category": "music",
 	"sounds": [
 	  {
 	    "name": "sa:records/always_with_me",
