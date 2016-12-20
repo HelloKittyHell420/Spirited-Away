@@ -112,59 +112,34 @@ public class SAItems {
     
     public static SAItemSwapper Transport;
     
-    //TODO: Records
 	public static Item pogo_bigger_blue;
 	public static Item dragon_boy;
 	public static Item dragon_boy2;
 	public static Item one_summers_day;
 	public static Item always_with_me;
 
-   
-      
-    public static void init() {
-    	
-    	register();
-    }
-
-	public static void register() {
-		
-		//AQUABARNES = new ItemStaff(0);
-		
-		//MUDBALL = new ItemMudball("mudball");
-		
-		//POTION = new ItemPotion("potion");
-
-	   //TRANSPORT = new SAItemSwapper("transport_swapper");
-	   //ARMOR = new SAItemSwapper("armor_swapper");
-	   //FOOD = new SAItemSwapper("food_swapper");
-			  
+    public static void initialization()
+    {
+	    //AQUABARNES = new ItemStaff(0);
+	   //MUDBALL = new ItemMudball("mudball");
        //HAT_RADISH = new ItemHat("hatradish", NONE, CommonProxy.addArmor("Radish Hat"), EntityEquipmentSlot.HEAD).setMaxStackSize(1);
        //TODO:FrogmanHat - Make Dyeable???
        //HAT_DYEABLE = new ItemHat("hatradish", NONE, CommonProxy.addArmor("Radish Hat"), EntityEquipmentSlot.HEAD).setMaxStackSize(1); 
        //HAT_RADISH = new ItemFrogmanHat(0, NONE, proxy.addArmor("Frogman Hat"), 0).func_77625_d(1); 
        //MASK_NOFACE = new ItemFrogmanHat(0, NONE, proxy.addArmor("No-Face Mask"), 0).func_77625_d(1);
        //MASKS = new ItemMasks("masks");
-
        //CHESTPLATE_HAKU = new ItemArmorHaku("haku_chestplate", 1, EntityEquipmentSlot.CHEST);
        //LEGGINGS_HAKU = new ItemArmorHaku("haku_leggings", 2, EntityEquipmentSlot.LEGS);
        //BOOTS_HAKU = new ItemArmorHaku("haku_boots", 1, EntityEquipmentSlot.FEET);
-       
        //CHESTPLATE_CHIHIRO = new ItemArmorChihiro("chihiro_chestplate", 1, EntityEquipmentSlot.CHEST);
        //LEGGINGS_CHIHIRO = new ItemArmorChihiro("chihiro_leggings", 2, EntityEquipmentSlot.LEGS);
        //BOOTS_CHIHIRO = new ItemArmorChihiro("chihiro_boots", 1, EntityEquipmentSlot.FEET);
-       
        //TODO: Custom Liquids/Bath Waters
        //BUCKET = new ItemBucket("bucket", Blocks.air);
-       //BUCKET_WATER = new ItemBucket("water_bucket", Blocks.flowing_water);
-       //BUCKET_LAVA = new ItemBucket("lava_bucket", Blocks.flowing_lava);
-       //BUCKET_MILK = new ItemBucket("milk_bucket", null);
-       
        //ELYTRA_RADISH = new ItemElytra("elytra_radish");
        //ELYTRA_KASHIRA = new ItemElytra("elytra_kashira");
        //ELYTRA_SOOTBALL = new ItemElytra("elytra_sootball"); 
-       
        //TRAIN = new ItemTrain("train", 0, TrainType.NORMAL);
-       
        //BOOK = new ItemBook("book");
        
        //TODO: RECORDS

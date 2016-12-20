@@ -1,25 +1,10 @@
 package com.aquabarnes.spiritedaway;
 
 import java.io.File;
-
-
-
-
-
-
-
-
-
-
-
-
-
 import org.apache.logging.log4j.Level;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.UUID;
-import net.minecraftforge.common.util.EnumHelper;
-
 import com.aquabarnes.spiritedaway.commands.CommandColorize;
 import com.aquabarnes.spiritedaway.commands.CommandDimensionTP;
 import com.aquabarnes.spiritedaway.commands.CommandSAOpenGUIs;
@@ -30,7 +15,7 @@ import com.aquabarnes.spiritedaway.creativetab.SAFoodTab;
 import com.aquabarnes.spiritedaway.creativetab.SAMaterialsTab;
 import com.aquabarnes.spiritedaway.creativetab.SAToolsTab;
 import com.aquabarnes.spiritedaway.creativetab.SATransportationTab;
-import com.aquabarnes.spiritedaway.achievements.SAAchievementPage;
+import com.aquabarnes.spiritedaway.achievements.SAAchievements;
 import com.aquabarnes.spiritedaway.client.model.ModelShikigami;
 import com.aquabarnes.spiritedaway.client.renderer.entity.RenderShikigami;
 import com.aquabarnes.spiritedaway.handler.SAConfiguration;
@@ -48,6 +33,7 @@ import com.aquabarnes.spiritedaway.init.SARanks;
 import com.aquabarnes.spiritedaway.init.SARecipes;
 import com.aquabarnes.spiritedaway.init.SASchematics;
 import com.aquabarnes.spiritedaway.init.SASoundEvents;
+import com.aquabarnes.spiritedaway.init.SATileEntites;
 import com.aquabarnes.spiritedaway.network.SAPacketHandler;
 import com.aquabarnes.spiritedaway.potions.SAPotions;
 import com.aquabarnes.spiritedaway.proxy.CommonProxy;
@@ -129,17 +115,15 @@ public class SpiritedAway
 
 	//SARanks.initialization();
 	
-	SAItems.init(); 
+	SAItems.initialization(); 
 	SABlocks.initialization();
 	SAItemBlocks.initialization();
 	
-	//TODO: LOOKUP
-	//SAPotions.init();
     SAEntities.initialization();
-	//SATileEntites.init();
+	//SATileEntites.initialization();
   
     //SASchematics.init();
-    SAAchievementPage.init();
+    SAAchievements.init();
     
     //SADimension.init();
     

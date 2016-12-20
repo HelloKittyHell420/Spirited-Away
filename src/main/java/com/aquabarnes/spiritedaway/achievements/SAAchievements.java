@@ -8,7 +8,7 @@ import net.minecraft.item.ItemStack;
 import net.minecraft.stats.Achievement;
 import net.minecraftforge.common.AchievementPage;
 
-public final class SAAchievementPage
+public final class SAAchievements
 {
   public static AchievementPage page;
   public static Achievement installmod;
