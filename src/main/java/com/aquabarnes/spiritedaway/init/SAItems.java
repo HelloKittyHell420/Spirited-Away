@@ -113,10 +113,11 @@ public class SAItems {
     public static SAItemSwapper Transport;
     
     //TODO: Records
+	public static Item pogo_bigger_blue;
 	public static Item dragon_boy;
+	public static Item dragon_boy2;
 	public static Item one_summers_day;
 	public static Item always_with_me;
-	public static Item RECORD_;
 
    
       
@@ -167,8 +168,9 @@ public class SAItems {
        //BOOK = new ItemBook("book");
        
        //TODO: RECORDS
-       RECORD_ = register("record_", new SAItemRecord("record_", SASoundEvents.record_, "Spirited Away", "Spirited Away"));
+       pogo_bigger_blue = register("record_pogo_bigger_blue", new SAItemRecord("record_pogo_bigger_blue", SASoundEvents.record_, "Spirited Away", "Spirited Away"));
        dragon_boy = register("record_dragon_boy", new SAItemRecord("record_dragon_boy", SASoundEvents.dragon_boy, "Spirited Away", "Dragon Boy"));
+       dragon_boy2 = register("record_dragon_boy2", new SAItemRecord("record_dragon_boy2", SASoundEvents.dragon_boy, "Spirited Away", "Dragon Boy"));
        one_summers_day = register("record_one_summers_day", new SAItemRecord("record_one_summers_day", SASoundEvents.one_summers_day, "Spirited Away", "One Summers Day"));
        always_with_me = register("record_always_with_me", new SAItemRecord("record_always_with_me", SASoundEvents.always_with_me, "Spirited Away", "Always With Me"));
        
