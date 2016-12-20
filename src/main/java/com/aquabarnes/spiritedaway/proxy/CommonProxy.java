@@ -17,10 +17,17 @@ import net.minecraftforge.fml.common.registry.EntityRegistry;
 
 public class CommonProxy {
 
+  public void preInitialization() {
 	  
+  }
+  
+  public void initialization() {
+		
+		
+  }
+	
   public void preInit(FMLPreInitializationEvent event) {
 
-	SASoundEvents.init();
 	  	  
   }
 	
@@ -58,4 +65,6 @@ public class CommonProxy {
 	// TODO Auto-generated method stub
 	
 }
+
+
 }

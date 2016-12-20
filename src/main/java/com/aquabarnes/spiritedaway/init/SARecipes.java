@@ -16,7 +16,7 @@ import net.minecraftforge.oredict.RecipeSorter;
 
 public class SARecipes {
 
-public static void init() {
+public static void initialization() {
 	register();
 }
 
@@ -26,14 +26,14 @@ CraftingManager.getInstance().getRecipeList().add(new RecipesDyeableArmor());
 RecipeSorter.register("sa:armordyes", RecipesDyeableArmor.class, RecipeSorter.Category.SHAPELESS, "after:minecraft:shapeless");	
 
 
-GameRegistry.addShapelessRecipe(new ItemStack(SAItems.AQUABARNES), new Object[] {Items.REDSTONE, new ItemStack(Items.DYE, 1, 4)});
+//GameRegistry.addShapelessRecipe(new ItemStack(SAItems.AQUABARNES), new Object[] {Items.REDSTONE, new ItemStack(Items.DYE, 1, 4)});
 
 
 
-GameRegistry.addShapedRecipe(new ItemStack(SABlocks.FISH_BLOCK), new Object[] {"XXX", "XXX", "XXX", 'X', new ItemStack(Items.FISH)});	
+//GameRegistry.addShapedRecipe(new ItemStack(SABlocks.FISH_BLOCK), new Object[] {"XXX", "XXX", "XXX", 'X', new ItemStack(Items.FISH)});	
 	
 	
-GameRegistry.addRecipe(new ItemStack(SABlocks.BASIN, 1), new Object[] {"   ", "X X", "#X#", '#', Items.STICK, 'X', Blocks.PLANKS});	
+//GameRegistry.addRecipe(new ItemStack(SABlocks.BASIN, 1), new Object[] {"   ", "X X", "#X#", '#', Items.STICK, 'X', Blocks.PLANKS});	
 
 //LEATHER --> WORKERS CLOTHES
 GameRegistry.addShapelessRecipe(new ItemStack(SAItems.LEGGINGS_DYEABLE_CLOTHES), new Object[] {new ItemStack(Items.LEATHER_LEGGINGS, 1)});

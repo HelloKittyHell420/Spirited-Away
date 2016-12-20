@@ -38,7 +38,7 @@ import net.minecraftforge.fml.common.registry.EntityRegistry;
 
 public class SAEntities {
 
-public static void init() {
+public static void initialization() {
 
 	registerMobs(); 
 	registerProjectiles();

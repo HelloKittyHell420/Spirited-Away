@@ -1,5 +1,6 @@
 package com.aquabarnes.spiritedaway.init;
 
+import com.aquabarnes.spiritedaway.SpiritedAway;
 import com.aquabarnes.spiritedaway.enums.TrainType;
 
 import com.aquabarnes.spiritedaway.item.ItemArmorChihiro;
@@ -14,6 +15,7 @@ import com.aquabarnes.spiritedaway.item.ItemMudball;
 import com.aquabarnes.spiritedaway.item.ItemPotion;
 import com.aquabarnes.spiritedaway.item.ItemStaff;
 import com.aquabarnes.spiritedaway.item.ItemTrain;
+import com.aquabarnes.spiritedaway.item.SAItemRecord;
 import com.aquabarnes.spiritedaway.item.SAItemSwapper;
 import com.aquabarnes.spiritedaway.itemblock.BlockSkull;
 import com.aquabarnes.spiritedaway.proxy.CommonProxy;
@@ -51,11 +53,6 @@ public class SAItems {
   
 	public static Item MUDBALL;
 	//public static Item MUDBALL;
-	
-	//RECORDS
-	public static Item RECORD_1;
-	public static Item RECORD_2;
-	public static Item RECORD_3;
 	
     public static Item RICE_SEEDS;
     public static Item RICE;
@@ -116,13 +113,16 @@ public class SAItems {
     public static SAItemSwapper Transport;
     
     //TODO: Records
+	public static Item dragon_boy;
+	public static Item one_summers_day;
+	public static Item always_with_me;
 	public static Item RECORD_;
+
    
       
     public static void init() {
     	
     	register();
-    	registerItems();
     }
 
 	public static void register() {
@@ -143,10 +143,6 @@ public class SAItems {
        //HAT_RADISH = new ItemFrogmanHat(0, NONE, proxy.addArmor("Frogman Hat"), 0).func_77625_d(1); 
        //MASK_NOFACE = new ItemFrogmanHat(0, NONE, proxy.addArmor("No-Face Mask"), 0).func_77625_d(1);
        //MASKS = new ItemMasks("masks");
-       
-       //TODO:Item Texture Dye Fix, LOOKUP:
-       CHESTPLATE_DYEABLE_CLOTHES = new ItemArmorDyeable("dyeable_chestplate", 1, EntityEquipmentSlot.CHEST);
-       LEGGINGS_DYEABLE_CLOTHES = new ItemArmorDyeable("dyeable_leggings", 2, EntityEquipmentSlot.LEGS);
 
        //CHESTPLATE_HAKU = new ItemArmorHaku("haku_chestplate", 1, EntityEquipmentSlot.CHEST);
        //LEGGINGS_HAKU = new ItemArmorHaku("haku_leggings", 2, EntityEquipmentSlot.LEGS);
@@ -166,45 +162,27 @@ public class SAItems {
        //ELYTRA_KASHIRA = new ItemElytra("elytra_kashira");
        //ELYTRA_SOOTBALL = new ItemElytra("elytra_sootball"); 
        
-       //RECORD_ = new ItemElytra("elytra_radish");
-       
        //TRAIN = new ItemTrain("train", 0, TrainType.NORMAL);
        
        //BOOK = new ItemBook("book");
        
+       //TODO: RECORDS
+       RECORD_ = register("record_", new SAItemRecord("record_", SASoundEvents.record_, "Spirited Away", "Spirited Away"));
+       dragon_boy = register("record_dragon_boy", new SAItemRecord("record_dragon_boy", SASoundEvents.dragon_boy, "Spirited Away", "Dragon Boy"));
+       one_summers_day = register("record_one_summers_day", new SAItemRecord("record_one_summers_day", SASoundEvents.one_summers_day, "Spirited Away", "One Summers Day"));
+       always_with_me = register("record_always_with_me", new SAItemRecord("record_always_with_me", SASoundEvents.always_with_me, "Spirited Away", "Always With Me"));
+       
+       //chestplate_dyeable_clothes = register("dyeable_chestplate", new ItemArmorDyeable("dyeable_chestplate", 1, EntityEquipmentSlot.CHEST));
+       //leggings_dyeable_clothes = register("dyeable_leggings", new ItemArmorDyeable("dyeable_leggings", 2, EntityEquipmentSlot.LEGS));
+       
 	}
 	
-	public static void registerItems() {
-		
-		registerItem(CHESTPLATE_DYEABLE_CLOTHES);
-		registerItem(LEGGINGS_DYEABLE_CLOTHES);
-		
-	}
-    	
-	
-	public static void registerItem(Item item) {
-    	
-		GameRegistry.registerItem(item, item.getUnlocalizedName().substring(5));
-		System.out.println("Registered Spirirted Away Item: " + item.getUnlocalizedName().substring(5));	
-	  
-	}
-	
-	@SideOnly(Side.CLIENT)
-    public static void registerRenders() {
-	  {
-	    ItemModelMesher mesher = Minecraft.getMinecraft().getRenderItem().getItemModelMesher();
-	    for (Field f : SAItems.class.getFields()) {
-	      try
-	      {
-	        Item item = (Item)f.get(null);
-	        String name = item.getUnlocalizedName().substring(5);
-	        mesher.register(item, 0, new ModelResourceLocation("sa:" + name, "inventory"));
-	      }
-	      catch (Exception e)
-	      {
-	        e.printStackTrace();
-	      }
-	    }
-	  }
+
+	public static Item register(String name, Item item)
+	{
+		item.setUnlocalizedName(name);
+		GameRegistry.register(item.setRegistryName(SpiritedAway.getResource(name)));
+  
+		return item;
 	}
 }

@@ -22,6 +22,7 @@ import com.aquabarnes.spiritedaway.itemblock.BlockWool;
 import com.aquabarnes.spiritedaway.block.BlockPump;
 import com.aquabarnes.spiritedaway.block.BlockShrine;
 import com.aquabarnes.spiritedaway.block.BlockSink;
+import com.aquabarnes.spiritedaway.block.BlockStair;
 import com.aquabarnes.spiritedaway.block.BlockSushiPlate;
 import com.aquabarnes.spiritedaway.block.BlockTable;
 import com.aquabarnes.spiritedaway.block.BlockToliet;
@@ -66,35 +67,30 @@ public class SABlocks {
 	public static Block FURNACE;
 	public static Block LIT_FURNACE;
 	
-	public static BlockBasin BASIN;
-	public static BlockShrine SHRINE;
+	public static Block basin;
+	public static Block shrine;
 	
 	//FENCE'S/GATE'S
-	public static Block FENCE_SAKURA;
-	public static Block FENCE_WISTERIA;
-	public static Block FENCE_ACERPALMATUM;
-	public static Block FENCE_WINTERSWEET;
+	public static Block sakura_fence;
+	public static Block wisteria_fence;
+	public static Block acer_palmatum_fence;
+	public static Block winter_sweet_fence;
 	
-	public static Block FENCE_GATE_SAKURA;
-	public static Block FENCE_GATE_WISTERIA;
-	public static Block FENCE_GATE_ACERPALMATUM;
-	public static Block FENCE_GATE_WINTERSWEET;
+	public static Block sakura_fence_gates;
+	public static Block wisteria_fence_gates;
+	public static Block acer_palmatum_fence_gates;
+	public static Block winter_sweet_fence_gates;
 
-    public static Block PRESSURE_PLATE_SAKURA;
-    public static Block PRESSURE_PLATE_WISTERIA;
-    public static Block PRESSURE_PLATE_ACERPALMATUM;
-    public static Block PRESSURE_PLATE_WINTERSWEET;
+    public static Block sakura_pressure_plate;
+    public static Block wisteria_pressure_plate;
+    public static Block acer_palmatum_pressure_plate;
+    public static Block winter_sweet_pressure_plate;
 
-    public static Block CLASSIC_BRICK_STEP;
-    public static Block CLASSIC_BRICK_HALFSTEP;
+    public static Block sakura_stairs;
+    public static Block wisteria_stairs;
+    public static Block acer_palmatum_stairs;
+    public static Block winter_sweet_stairs;
     
-    public static Block STAIR_SAKURA;
-    public static Block STAIR_WISTERIA;
-    public static Block STAIR_ACERPALMATUM;
-    public static Block STAIR_WINTERSWEET;
-    
-	//TODO: 
-	public static BlockSapling SAPLING;
 	public static BlockButton BUTTON;
 	
 	public static Block RICE_BOWL;
@@ -148,14 +144,11 @@ public class SABlocks {
     
     public static Block LIT_LAMP;
     public static Block LAMP;
+    
+    public static Block dungeon_block;
     	
-    public static void init() {
-    	register();
-    	registerBlocks();
-    }
-
-    public static void register() {
-
+    public static void initialization()
+    {
     	//LIT_LAMP = new BlockLamp(true, "lit_lamp");
     	//LAMP = new BlockLamp(false, "lamp");
     	
@@ -186,7 +179,7 @@ public class SABlocks {
 		//CHOPSTICK_CUP = new BlockChopstick("chopstick_cup", Material.rock);
 			
 		//TODO:Basin - Data Storage whiles picked up, holding water amount..
-		BASIN = new BlockBasin("basin", Material.WOOD, MapColor.WOOD);	
+		basin = register("basin", new BlockBasin("basin", Material.WOOD, MapColor.WOOD));	
 		
     	//SEE TODO: LIST - TILE ENTITY SPECIAL RENDERER
 		//SUSHI_PLATE = new BlockSushiPlate("sushi_plate", Material.wood);	
@@ -195,7 +188,7 @@ public class SABlocks {
 		//PUMP = new BlockPump("pump", Material.iron, MapColor.ironColor);
 		
     	//SEE TODO: LIST
-		SHRINE = new BlockShrine("shrine");
+		shrine = register("shrine", new BlockShrine("shrine"));
 		
     	//SEE TODO: LIST
 		//HAKU_EGG = new BlockEgg("haku_egg", Material.wood);	
@@ -203,122 +196,41 @@ public class SABlocks {
 			
 		//FISH_BLOCK = new BlockFish("fish_block");	
 		
-		FENCE_SAKURA = new BlockFences("sakura_fence");
-		FENCE_WISTERIA = new BlockFences("wisteria_fence");
-		FENCE_ACERPALMATUM = new BlockFences("acer_palmatum_fence");
-		FENCE_WINTERSWEET = new BlockFences("winter_sweet_fence");
+		sakura_fence = register("sakura_fence", new BlockFences("sakura_fence"));
+		wisteria_fence = register("wisteria_fence", new BlockFences("wisteria_fence"));
+		acer_palmatum_fence = register("acer_palmatum_fence", new BlockFences("acer_palmatum_fence"));
+		winter_sweet_fence = register("winter_sweet_fence", new BlockFences("winter_sweet_fence"));
 		
-		FENCE_GATE_SAKURA = new BlockGates("sakura_fence_gate", EnumType.OAK);
-		FENCE_GATE_WISTERIA = new BlockGates("wisteria_fence_gate", EnumType.OAK);
-		FENCE_GATE_ACERPALMATUM = new BlockGates("acer_palmatum_fence_gate", EnumType.OAK);
-		FENCE_GATE_WINTERSWEET = new BlockGates("winter_sweet_fence_gate", EnumType.OAK);
+		//sakura_fence_gate = new BlockGates("sakura_fence_gate", EnumType.OAK);
+		//wisteria_fence_gate = new BlockGates("wisteria_fence_gate", EnumType.OAK);
+		//acer_palmatum_fence_gate = new BlockGates("acer_palmatum_fence_gate", EnumType.OAK);
+		//winter_sweet_fence_gate = new BlockGates("winter_sweet_fence_gate", EnumType.OAK);
 		
-    	PRESSURE_PLATE_SAKURA = new BlockPressurePlate("sakura_pressure_plate", Material.WOOD, Sensitivity.EVERYTHING);
-    	PRESSURE_PLATE_WISTERIA = new BlockPressurePlate("wisteria_pressure_plate", Material.WOOD, Sensitivity.EVERYTHING);
-    	PRESSURE_PLATE_ACERPALMATUM = new BlockPressurePlate("acer_palmatum_pressure_plate", Material.WOOD, Sensitivity.EVERYTHING);
-    	PRESSURE_PLATE_WINTERSWEET = new BlockPressurePlate("winter_sweet_pressure_plate", Material.WOOD, Sensitivity.EVERYTHING);
+		//sakura_pressure_plate = new BlockPressurePlate("sakura_pressure_plate", Material.WOOD, Sensitivity.EVERYTHING);
+		//wisteria_pressure_plate = new BlockPressurePlate("wisteria_pressure_plate", Material.WOOD, Sensitivity.EVERYTHING);
+    	//acer_palmatum_pressure_plate = new BlockPressurePlate("acer_palmatum_pressure_plate", Material.WOOD, Sensitivity.EVERYTHING);
+    	//winter_sweet_pressure_plateT = new BlockPressurePlate("winter_sweet_pressure_plate", Material.WOOD, Sensitivity.EVERYTHING);
+    	
+    	//sakura_stairs = register("sakura_stairs", new BlockStair(SAItemBlocks.planks.getDefaultState()));
+    	//wisteria_stairs = register("sakura_stairs", new BlockStair(null));
+    	//acer_palmatum_stairs = register("sakura_stairs", new BlockStair(null));
+    	//winter_sweet_stairs = register("sakura_stairs", new BlockStair(null));
+    	
     	
 		//GameRegistry.registerTileEntity(TileEntityWorkbench.class, "sa.crafting_table");
 		GameRegistry.registerTileEntity(TileEntityFurnace.class, "sa.furnace");
 		GameRegistry.registerTileEntity(TileEntitySkull.class, "sa.skull");
 				
 		}
-    
-    	public static void registerBlocks() {
-    		
-    		registerBlock(FENCE_SAKURA);
-    		registerBlock(FENCE_WISTERIA);
-    		registerBlock(FENCE_ACERPALMATUM);
-    		registerBlock(FENCE_WINTERSWEET);
-    		
-    		registerBlock(FENCE_GATE_SAKURA);
-    		registerBlock(FENCE_GATE_WISTERIA);
-    		registerBlock(FENCE_GATE_ACERPALMATUM);
-    		registerBlock(FENCE_GATE_WINTERSWEET);
-    		
-    		registerBlock(PRESSURE_PLATE_SAKURA);
-    		registerBlock(PRESSURE_PLATE_WISTERIA);
-    		registerBlock(PRESSURE_PLATE_ACERPALMATUM);
-    		registerBlock(PRESSURE_PLATE_WINTERSWEET);
-    		
-    		registerBlock(CHAIR);
-    		registerBlock(SHRINE);
-    		registerBlock(BASIN);
-    		
-    		//registerBlock(FISH_BLOCK);
-    		
-    		//registerBlock(HAKU_EGG);
-    		//registerBlock(CHIHIRO_EGG);
-    		
-    	}
      
-    	public static void registerBlock(Block block) {
-        	
-    		GameRegistry.registerBlock(block, block.getUnlocalizedName().substring(5));
-    		System.out.println("Registered Spirirted Away Block: " + block.getUnlocalizedName().substring(5));	
-    	  
-    	}
-        
-		public static void registerRenders() {
-			
-			//registerRender(WOODEN_PRESSURE_PLATE);
-			//registerRender(SPRUCE_PRESSURE_PLATE);
-			//registerRender(BIRCH_PRESSURE_PLATE);
-			//registerRender(JUNGLE_PRESSURE_PLATE);
-			//registerRender(ACACIA_PRESSURE_PLATE);
-			//registerRender(DARK_OAK_PRESSURE_PLATE);
-			
-			//registerRender(TOLIET);
-			//registerRender(SINK);
-			
-			//registerRender(TEST);
-			//registerRender(TEST1);
-			
-			//registerRender(TORCH);
-		
-			//registerRender(PUMP); 
-			
-			//registerRender(CRAFTING_TABLE);
-			//registerRender(FURNACE);
-			//registerRender(LIT_FURNACE);
-			
-			//registerRender(LAMP);
-			//registerRender(LIT_LAMP);
-			
-			//registerRender(SUSHI_PLATE);
-			registerRender(SHRINE);
-			registerRender(BASIN);
-			
-			registerRender(FENCE_SAKURA);
-			registerRender(FENCE_WISTERIA);
-			registerRender(FENCE_ACERPALMATUM);
-			registerRender(FENCE_WINTERSWEET);
-			
-    		registerRender(FENCE_GATE_SAKURA);
-    		registerRender(FENCE_GATE_WISTERIA);
-    		registerRender(FENCE_GATE_ACERPALMATUM);
-    		registerRender(FENCE_GATE_WINTERSWEET);
-    		
-    		registerRender(PRESSURE_PLATE_SAKURA);
-    		registerRender(PRESSURE_PLATE_WISTERIA);
-    		registerRender(PRESSURE_PLATE_ACERPALMATUM);
-    		registerRender(PRESSURE_PLATE_WINTERSWEET);
-			
-			//registerRender(CHOPSTICK_CUP);
-			
-			//registerRender(FISH_BLOCK);
-			
-			//EGGS
-			//registerRender(HAKU_EGG);
-			//registerRender(CHIHIRO_EGG);
-			
-	   }
-
-	   @SideOnly(Side.CLIENT)
-       public static void registerRender(Block block) {
-		   
-		   Item item = Item.getItemFromBlock(block);
-		   Minecraft.getMinecraft().getRenderItem().getItemModelMesher().register(item, 0, new ModelResourceLocation(block.getRegistryName(), "inventory"));
+    public static Block register(String name, Block block)
+    {
+      block.setUnlocalizedName(name);
+      
+      GameRegistry.register(block.setRegistryName(SpiritedAway.getResource(name)));
+      GameRegistry.register(new ItemBlock(block).setRegistryName(SpiritedAway.getResource(name)));
+      
+      return block;
      
     }
     

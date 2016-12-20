@@ -13,27 +13,22 @@ import net.minecraft.entity.player.EntityPlayerMP;
 import net.minecraft.server.MinecraftServer;
 import net.minecraft.server.management.PlayerInteractionManager;
 import net.minecraft.world.DimensionType;
+import net.minecraft.world.biome.Biome;
 import net.minecraftforge.common.DimensionManager;
 
 public class SADimension {
 	 
-	public static int SpiritedAwayDimensionID = SAConfiguration.SpiritedAwayID;
-	public static DimensionType SpiritedAway; 
-		 
-	public static void init()
+	  public static Biome spiritedaway_biome;
+	  public static DimensionType spiritedaway_dimension_type;
+	  
+	  public static void initialization()
 	  {
-	    registerDimensionsType();
-	    registerDimensions();
+		spiritedaway_biome = new SABiomes();
+	    
+	    Biome.registerBiome(SAConfiguration.getSpiritedAwayBiomeID(), "sa:aether_highlands", spiritedaway_biome);
+	    
+	    spiritedaway_dimension_type = DimensionType.register("AetherI", "_aetherI", SAConfiguration.getSpiritedAwayDimensionID(), SAWorldProvider.class, true);
+	    
+	    DimensionManager.registerDimension(SAConfiguration.getSpiritedAwayDimensionID(), spiritedaway_dimension_type);
 	  }
-	 
-	  private static void registerDimensionsType() {
-		
-		  SpiritedAway = DimensionType.register("Spirited Away", "_spiritedaway", SpiritedAwayDimensionID, SAWorldProvider.class, false);
-	  }
-
-	  private static void registerDimensions() 
-	  {
-		  DimensionManager.registerDimension(SpiritedAwayDimensionID, SpiritedAway);
-	  }
-  }
-
+	}

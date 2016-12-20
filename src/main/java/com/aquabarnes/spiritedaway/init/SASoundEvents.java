@@ -8,28 +8,29 @@ import net.minecraftforge.fml.common.registry.GameRegistry;
 
 public class SASoundEvents {
 
-public static SoundEvent entity_sootball_death;
-public static SoundEvent entity_sootball_hurt;
-public static SoundEvent entity_sootball_loop;
+public static SoundEvent record_;
+public static SoundEvent dragon_boy;
+public static SoundEvent one_summers_day;
+public static SoundEvent always_with_me;
 
-//public static final SoundEvent record_ = new SoundEvent(AetherCore.getResource("records."));
-//public static final SoundEvent record_ = new SoundEvent(AetherCore.getResource("records."));
-//public static final SoundEvent record_ = new SoundEvent(AetherCore.getResource("records."));
-//public static final SoundEvent record_ = new SoundEvent(AetherCore.getResource("records."));
+public static SoundEvent sootball_living;
+public static SoundEvent sootball_hurt;
 
-public static final SoundEvent entity_sootball_ambient = new SoundEvent(SpiritedAway.getResource("mob.generic.wings.flap"));
-
-public static void init()
+public static void initialization()
 {
-	registerSound("entity.sootball.ambient", entity_sootball_ambient);
-//entity_sootball_death = registerSound("entity.sootball.death");
-//entity_sootball_hurt = registerSound("entity.sootball.hurt");
-//entity_sootball_loop = registerSound("entity.sootball.loop");
-
+  record_ = register(SpiritedAway.getResource("records.sa"));
+  dragon_boy = register(SpiritedAway.getResource("records.dragon_boy"));
+  one_summers_day = register(SpiritedAway.getResource("records.one_summers_day"));
+  always_with_me = register(SpiritedAway.getResource("records.always_with_me"));
+  
+  sootball_living = register(SpiritedAway.getResource("mob.sootball_living"));
+  sootball_hurt = register(SpiritedAway.getResource("mob.sootball_hurt"));
 }
 
-private static void registerSound(String resource, SoundEvent event)
+public static SoundEvent register(ResourceLocation location)
 {
-  GameRegistry.register(event, SpiritedAway.getResource(resource));
+  SoundEvent sound = new SoundEvent(location);
+  
+  return (SoundEvent)GameRegistry.register(sound, location);
 }
 }

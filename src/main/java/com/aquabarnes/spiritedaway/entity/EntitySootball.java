@@ -62,12 +62,14 @@ public class EntitySootball extends EntityMob {
 
     protected SoundEvent getAmbientSound()
     {
-        return SASoundEvents.entity_sootball_ambient;
+        return SASoundEvents.sootball_living;
+    }
+    
+    protected SoundEvent getDeathSound()
+    {
+        return SASoundEvents.sootball_hurt;
     }
 
-    /**
-     * Returns the volume for the sounds this mob makes.
-     */
     protected float getSoundVolume()
     {
         return 0.4F;

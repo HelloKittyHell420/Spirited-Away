@@ -67,7 +67,7 @@ public class SAConfiguration
   public static boolean dungeonLoot;
 
   
-  public static void init(File location)
+  public static void initialization(File location)
   {
 	    File newFile = new File(location + "/Spirited Away" + "/Entites.cfg");
 	    try
@@ -164,5 +164,15 @@ public class SAConfiguration
     return this.maxGroupsPerChunk;
   }
 
+}
+
+public static int getSpiritedAwayDimensionID() {
+	// TODO Auto-generated method stub
+	return 0;
+}
+
+public static Object getSpiritedAwayBiomeID() {
+	// TODO Auto-generated method stub
+	return null;
 }
 }

@@ -108,7 +108,7 @@ public class BlockShrine extends Block {
 			public static void setState(boolean active, World worldIn, BlockPos pos)
 			{
 				IBlockState iblockstate = worldIn.getBlockState(pos);
-			    worldIn.setBlockState(pos, SABlocks.SHRINE.getDefaultState().withProperty(FACING, iblockstate.getValue(FACING)), 3);
+			    worldIn.setBlockState(pos, SABlocks.shrine.getDefaultState().withProperty(FACING, iblockstate.getValue(FACING)), 3);
 				
 			    return;
 			}
@@ -133,7 +133,7 @@ public class BlockShrine extends Block {
 
 	        public ItemStack getItem(World worldIn, BlockPos pos, IBlockState state)
 	        {
-	            return new ItemStack(SABlocks.SHRINE);
+	            return new ItemStack(SABlocks.shrine);
 	        }
 
 	        /**

@@ -18,7 +18,7 @@ public final class SAAchievementPage
   public static void init()
   {
     installmod = new SAAchievement("achievement.installMod", "installMod", 0, 0, new ItemStack(Items.SLIME_BALL), installmod).setSpecial();
-    travelSpiritedAway = new SAAchievement("achievement.enterSpiritedAway", "enterSpiritedAway", 1, 4, SABlocks.SHRINE, null);
+    travelSpiritedAway = new SAAchievement("achievement.enterSpiritedAway", "enterSpiritedAway", 1, 4, SABlocks.shrine, null);
 
     page = new AchievementPage("§4Spirited Away", new Achievement[] { installmod, travelSpiritedAway});
     AchievementPage.registerAchievementPage(page);

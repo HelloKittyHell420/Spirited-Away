@@ -2,10 +2,9 @@ package com.aquabarnes.spiritedaway.proxy;
 
 import java.util.Random;
 
-
-
+import com.aquabarnes.spiritedaway.renders.BlockRendering;
+import com.aquabarnes.spiritedaway.renders.ItemRendering;
 import com.aquabarnes.spiritedaway.client.model.ModelChihiro;
-import com.aquabarnes.lostinspace.client.model.ModelBird;
 import com.aquabarnes.spiritedaway.client.model.ModelFrogman;
 import com.aquabarnes.spiritedaway.client.model.ModelHakuDragon;
 import com.aquabarnes.spiritedaway.client.model.ModelHakuHuman;
@@ -129,9 +128,18 @@ import net.minecraftforge.fml.relauncher.SideOnly;
 
 public class ClientProxy extends CommonProxy {	
 	
-@SideOnly(Side.CLIENT)
-public void registerEntityRenderers()
-{	
+
+	  public void preInitialization() {}
+	  
+	  public void initialization()
+	  {
+		BlockRendering.initialize();
+		ItemRendering.initialize(); 
+	  }
+	
+	  @SideOnly(Side.CLIENT)
+	  public void registerEntityRenderers()
+	  {	
 	//Projectiles
 	//RenderingRegistry.registerEntityRenderingHandler(EntitySpiritEye.class, new RenderSpiritEye(this, SAItems.SpiritEye, itemRendererIn));
 	RenderingRegistry.registerEntityRenderingHandler(EntityMudball.class, new RenderSnowball(Minecraft.getMinecraft().getRenderManager(), SAItems.MUDBALL, null));
@@ -139,7 +147,7 @@ public void registerEntityRenderers()
 	//Mobs
 	//RenderingRegistry.registerEntityRenderingHandler(EntityUUIDSkin.class, new RenderUUIDSkin(Minecraft.getMinecraft().getRenderManager(), new ModelBipedBase(), 0.4F));
 	RenderingRegistry.registerEntityRenderingHandler(EntityAkiichiro.class, new RenderAkiichiro(Minecraft.getMinecraft().getRenderManager(), new ModelBipedBase(), 0.4F));
-	RenderingRegistry.registerEntityRenderingHandler(EntityBoh.class, new RenderBoh(Minecraft.getMinecraft().getRenderManager(), new ModelBird(), 0.4F));
+	//RenderingRegistry.registerEntityRenderingHandler(EntityBoh.class, new RenderBoh(Minecraft.getMinecraft().getRenderManager(), new ModelBird(), 0.4F));
 	RenderingRegistry.registerEntityRenderingHandler(EntityChihiro.class, new RenderChihiro(Minecraft.getMinecraft().getRenderManager(), new ModelChihiro(), 0.4F));
 	RenderingRegistry.registerEntityRenderingHandler(EntityFrogman.class, new RenderFrogman(Minecraft.getMinecraft().getRenderManager(), new ModelFrogman(), 0.4F));
 	RenderingRegistry.registerEntityRenderingHandler(EntityHakuHuman.class, new RenderHakuHuman(Minecraft.getMinecraft().getRenderManager(), new ModelBipedBase(), 0.4F));
@@ -164,10 +172,6 @@ public void registerEntityRenderers()
 
 	//RenderingRegistry.registerEntityRenderingHandler(AbstractClientPlayer.class, new SALayerElytra(Minecraft.getMinecraft().getRenderManager(), new ModelElytra(), 0));
 	
-	SABlocks.registerRenders();
-	SAItems.registerRenders(); 
-	
-	SAItemBlocks.registerRenders();
 
 	MinecraftForge.EVENT_BUS.register(new TickHandler());
 	FMLCommonHandler.instance().bus().register(new TickHandler());
@@ -177,10 +181,10 @@ public void registerEntityRenderers()
 
 	public void registerModelBakeryStuff() {
 		
-		ModelBakery.registerItemVariants(Item.getItemFromBlock(SAItemBlocks.BOWLS)
+		ModelBakery.registerItemVariants(Item.getItemFromBlock(SAItemBlocks.bowls)
 				, new ResourceLocation("sa:bowl_white_empty")
 				, new ResourceLocation("sa:bowl_orange_empty"));
-		ModelBakery.registerItemVariants(Item.getItemFromBlock(SAItemBlocks.PLANKS), new ResourceLocation("sa:planks_sakura"), new ResourceLocation("sa:planks_wisteria"), new ResourceLocation("sa:planks_acer_palmatum"), new ResourceLocation("sa:planks_winter_sweet"));
+		ModelBakery.registerItemVariants(Item.getItemFromBlock(SAItemBlocks.planks), new ResourceLocation("sa:planks_sakura"), new ResourceLocation("sa:planks_wisteria"), new ResourceLocation("sa:planks_acer_palmatum"), new ResourceLocation("sa:planks_winter_sweet"));
 		//ModelBakery.registerItemVariants(Item.getItemFromBlock(SAItemBlocks.SAPLING), new ResourceLocation("sa:sapling_sakura"), new ResourceLocation("sa:sapling_wisteria"), new ResourceLocation("sa:sapling_acer_palmatum"), new ResourceLocation("sa:sapling_winter_sweet"));
 
 	}

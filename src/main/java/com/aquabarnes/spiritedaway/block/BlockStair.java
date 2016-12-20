@@ -1,5 +1,12 @@
 package com.aquabarnes.spiritedaway.block;
 
-public class BlockStairs {
+import net.minecraft.block.BlockStairs;
+import net.minecraft.block.state.IBlockState;
 
+public class BlockStair extends BlockStairs
+{
+public BlockStair(IBlockState modelState)
+{
+  super(modelState);
+}
 }

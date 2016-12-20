@@ -14,25 +14,24 @@ import net.minecraft.util.ResourceLocation;
 import net.minecraft.util.SoundEvent;
 
 public class SAItemRecord extends ItemRecord {
-
-	private static final Map<SoundEvent, ItemRecord> RECORDS = Maps.<SoundEvent, ItemRecord>newHashMap();
-	private static SoundEvent sound;
 	
-	public static ResourceLocation RECORD_1_RESOURCE = new ResourceLocation("sa", "shuffling");
-	
-	  public SAItemRecord(String name)
-	  {
-		super(name, sound);
-		this.setUnlocalizedName(name);
-        this.setCreativeTab(CreativeTabs.tabMisc);
-        if (!SpiritedAway.isServer()) {
-        	Minecraft.getMinecraft().getRenderItem().getItemModelMesher().register(this, 0, new ModelResourceLocation("sa:" + name, "inventory"));
-          }
-        }
-	
-	  public ResourceLocation getRecordResource(String name)
-	  {
-	    return RECORD_1_RESOURCE;
-	  }
-	}
-
+  public String artistName;
+  public String songName;
+  
+  public SAItemRecord(String s, SoundEvent event, String artist, String song)
+  {
+    super(s, event);
+    this.artistName = artist;
+    this.songName = song;
+  }
+  
+  public String func_150927_i()
+  {
+    return this.artistName + " - " + this.songName;
+  }
+  
+  public ResourceLocation getRecordResource(String name)
+  {
+    return new ResourceLocation("sa", name);
+  }
+}

@@ -21,7 +21,7 @@ public class SACreativeTabs {
 	public static CreativeTabs COMBAT;
 	public static CreativeTabs MATERIALS;
 
-	public static void init() {
+	public static void initialization() {
 		
 		registerCreativeTabs();
 	}
