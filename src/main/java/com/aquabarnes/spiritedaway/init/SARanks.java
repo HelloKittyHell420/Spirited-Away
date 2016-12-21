@@ -16,7 +16,6 @@ public class SARanks
     addTesterRank("2ae3627a-5eba-46f7-9c29-3119ae41c4ef");
     
     addTesterRank("b6310a91-919e-4f31-920b-42dbc15957a8");
-    
   }
   
   public static UUID getUUID(String string)
