@@ -46,4 +46,9 @@ public class SARanks
     ranks.put("Spirited Away Tester-" + uuid, getUUID(uuid)); 
   }
   
+  public static void addFriendRank(String uuid)
+  {
+    ranks.put("Spirited Away Friend-" + uuid, getUUID(uuid)); 
+  }
+  
 }
