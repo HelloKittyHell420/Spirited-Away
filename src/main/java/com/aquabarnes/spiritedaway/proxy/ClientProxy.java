@@ -2,6 +2,15 @@ package com.aquabarnes.spiritedaway.proxy;
 
 import java.util.Random;
 
+
+import java.util.Map;
+import net.minecraft.client.Minecraft;
+import net.minecraft.client.renderer.entity.RenderManager;
+import net.minecraft.client.renderer.entity.RenderPlayer;
+import net.minecraft.client.settings.GameSettings;
+import net.minecraft.entity.player.EnumPlayerModelParts;
+import net.minecraftforge.common.MinecraftForge;
+import net.minecraftforge.fml.common.eventhandler.EventBus;
 import com.aquabarnes.spiritedaway.renders.BlockRendering;
 import com.aquabarnes.spiritedaway.renders.ItemRendering;
 import com.aquabarnes.spiritedaway.client.model.ModelChihiro;
@@ -10,6 +19,7 @@ import com.aquabarnes.spiritedaway.client.model.ModelHakuDragon;
 import com.aquabarnes.spiritedaway.client.model.ModelHakuHuman;
 import com.aquabarnes.spiritedaway.client.model.ModelKashira;
 import com.aquabarnes.spiritedaway.client.model.ModelKasuga;
+import com.aquabarnes.spiritedaway.PlayerInfo;
 import com.aquabarnes.spiritedaway.client.main_menu.GuiSpiritedAwayMenu;
 import com.aquabarnes.spiritedaway.client.model.ModelBipedBase;
 import com.aquabarnes.spiritedaway.client.model.ModelBipedMini;
@@ -41,7 +51,6 @@ import com.aquabarnes.spiritedaway.client.renderer.entity.RenderUshi;
 import com.aquabarnes.spiritedaway.client.renderer.entity.RenderYubaba;
 import com.aquabarnes.spiritedaway.client.renderer.entity.RenderYuko;
 import com.aquabarnes.spiritedaway.client.renderer.entity.RenderZenbia;
-import com.aquabarnes.spiritedaway.client.renderer.tileenitity.RenderCustom;
 import com.aquabarnes.spiritedaway.entity.EntityAkiichiro;
 import com.aquabarnes.spiritedaway.entity.EntityBoh;
 import com.aquabarnes.spiritedaway.entity.EntityChihiro;
@@ -99,12 +108,15 @@ import net.minecraft.client.renderer.entity.RenderPig;
 import net.minecraft.client.renderer.entity.RenderPlayer;
 import net.minecraft.client.renderer.entity.RenderSnowball;
 import net.minecraft.client.renderer.entity.RenderZombie;
+import net.minecraft.client.renderer.entity.layers.LayerCape;
+import net.minecraft.client.renderer.entity.layers.LayerElytra;
 import net.minecraft.client.renderer.entity.layers.LayerSheepWool;
 import net.minecraft.entity.boss.EntityDragon;
 import net.minecraft.entity.item.EntityEnderEye;
 import net.minecraft.entity.passive.EntityPig;
 import net.minecraft.entity.passive.EntityVillager;
 import net.minecraft.entity.player.EntityPlayer;
+import net.minecraft.entity.player.EnumPlayerModelParts;
 import net.minecraft.init.Items;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
@@ -129,8 +141,17 @@ import net.minecraftforge.fml.relauncher.SideOnly;
 public class ClientProxy extends CommonProxy {	
 	
 
-	  public void preInitialization() {}
-	  
+	  public void preinitialization() 
+	  {
+		MinecraftForge.EVENT_BUS.register(new PlayerInfo());
+		//Minecraft.getMinecraft().getRenderManager().getClass(EnumPlayerModelParts.CAPE, true);
+		for (RenderPlayer render : Minecraft.getMinecraft().getRenderManager().getSkinMap().values())
+		{ 
+			render.addLayer(new LayerCape(render));
+	        render.addLayer(new LayerElytra(render));
+	    }
+	  }
+
 	  public void initialization()
 	  {
 		BlockRendering.initialize();

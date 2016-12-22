@@ -6,6 +6,7 @@ import com.aquabarnes.spiritedaway.SpiritedAway;
 
 
 
+
 import com.aquabarnes.spiritedaway.block.BlockBasin;
 import com.aquabarnes.spiritedaway.block.BlockChair;
 import com.aquabarnes.spiritedaway.block.BlockChopstick;
@@ -18,10 +19,10 @@ import com.aquabarnes.spiritedaway.block.BlockLamp;
 import com.aquabarnes.spiritedaway.block.BlockPressurePlate;
 import com.aquabarnes.spiritedaway.block.BlockPressurePlate.Sensitivity;
 import com.aquabarnes.spiritedaway.itemblock.BlockSkull;
-import com.aquabarnes.spiritedaway.itemblock.BlockWool;
 import com.aquabarnes.spiritedaway.block.BlockPump;
 import com.aquabarnes.spiritedaway.block.BlockShrine;
 import com.aquabarnes.spiritedaway.block.BlockSink;
+import com.aquabarnes.spiritedaway.block.BlockSlabs;
 import com.aquabarnes.spiritedaway.block.BlockStair;
 import com.aquabarnes.spiritedaway.block.BlockSushiPlate;
 import com.aquabarnes.spiritedaway.block.BlockTable;
@@ -168,7 +169,7 @@ public class SABlocks {
     	//acer_palmatum_stairs = register("sakura_stairs", new BlockStair(null));
     	//winter_sweet_stairs = register("sakura_stairs", new BlockStair(null));
     	
-    	
+
 		//GameRegistry.registerTileEntity(TileEntityWorkbench.class, "sa.crafting_table");
 		GameRegistry.registerTileEntity(TileEntityFurnace.class, "sa.furnace");
 		GameRegistry.registerTileEntity(TileEntitySkull.class, "sa.skull");

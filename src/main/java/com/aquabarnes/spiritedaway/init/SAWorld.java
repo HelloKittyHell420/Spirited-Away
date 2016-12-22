@@ -16,7 +16,7 @@ import net.minecraft.world.DimensionType;
 import net.minecraft.world.biome.Biome;
 import net.minecraftforge.common.DimensionManager;
 
-public class SADimension {
+public class SAWorld {
 	 
 	  public static Biome spiritedaway_biome;
 	  public static DimensionType spiritedaway_dimension_type;
@@ -25,9 +25,9 @@ public class SADimension {
 	  {
 		spiritedaway_biome = new SABiomes();
 	    
-	    Biome.registerBiome(SAConfiguration.getSpiritedAwayBiomeID(), "sa:aether_highlands", spiritedaway_biome);
+	    Biome.registerBiome((Integer) SAConfiguration.getSpiritedAwayBiomeID(), "sa:highlands", spiritedaway_biome);
 	    
-	    spiritedaway_dimension_type = DimensionType.register("AetherI", "_aetherI", SAConfiguration.getSpiritedAwayDimensionID(), SAWorldProvider.class, true);
+	    spiritedaway_dimension_type = DimensionType.register("SpiritedAway", "_spiritedaway", SAConfiguration.getSpiritedAwayDimensionID(), SAWorldProvider.class, true);
 	    
 	    DimensionManager.registerDimension(SAConfiguration.getSpiritedAwayDimensionID(), spiritedaway_dimension_type);
 	  }

@@ -1,6 +1,7 @@
 package com.aquabarnes.spiritedaway;
 
 import java.io.File;
+
 import org.apache.logging.log4j.Level;
 import java.util.ArrayList;
 import java.util.List;
@@ -22,18 +23,19 @@ import com.aquabarnes.spiritedaway.handler.SAConfiguration;
 import com.aquabarnes.spiritedaway.init.SABiomes;
 import com.aquabarnes.spiritedaway.init.SABlocks;
 import com.aquabarnes.spiritedaway.init.SACreativeTabs;
-import com.aquabarnes.spiritedaway.init.SADimension;
 import com.aquabarnes.spiritedaway.init.SAEntities;
 import com.aquabarnes.spiritedaway.init.SAEventHandler;
 import com.aquabarnes.spiritedaway.init.SAFluids;
 import com.aquabarnes.spiritedaway.init.SAGuiHandler;
 import com.aquabarnes.spiritedaway.init.SAItemBlocks;
 import com.aquabarnes.spiritedaway.init.SAItems;
+import com.aquabarnes.spiritedaway.init.SANetworkingManager;
 import com.aquabarnes.spiritedaway.init.SARanks;
 import com.aquabarnes.spiritedaway.init.SARecipes;
 import com.aquabarnes.spiritedaway.init.SASchematics;
 import com.aquabarnes.spiritedaway.init.SASoundEvents;
 import com.aquabarnes.spiritedaway.init.SATileEntites;
+import com.aquabarnes.spiritedaway.init.SAWorld;
 import com.aquabarnes.spiritedaway.network.SAPacketHandler;
 import com.aquabarnes.spiritedaway.potions.SAPotions;
 import com.aquabarnes.spiritedaway.proxy.CommonProxy;
@@ -83,10 +85,11 @@ import net.minecraftforge.fml.common.registry.EntityRegistry;
 import net.minecraftforge.fml.common.registry.GameRegistry;
 import net.minecraftforge.fml.relauncher.Side;
 
-@Mod(modid="SA", name="Spirited Away", version="1.10.2-1.0", dependencies="required-after:AquaBarnesUtils@[1.0,);", acceptedMinecraftVersions="[1.10.2]")
+@Mod(modid=SpiritedAway.modid, name="Spirited Away", version="1.10.2-1.0", dependencies="required-after:AquaBarnesUtils@[1.0,);", acceptedMinecraftVersions="[1.10.2]")
 public class SpiritedAway
 {
-  @Mod.Instance("SA")
+  public static final String modid = "sa";
+  @Instance(SpiritedAway.modid)
   public static SpiritedAway instance;
   @SidedProxy(clientSide="com.aquabarnes.spiritedaway.proxy.ClientProxy", serverSide="com.aquabarnes.spiritedaway.proxy.CommonProxy")
   public static CommonProxy proxy;
@@ -97,7 +100,10 @@ public class SpiritedAway
 	SAConfiguration.initialization(event.getModConfigurationDirectory());
 
 	//TODO: Networking
-    proxy.preInitialization();
+    //proxy.preinitialization();
+    
+    //NetworkRegistry.INSTANCE.registerGuiHandler(SpiritedAway.modAddress(), new SAGuiHandler());
+    
   } 
   
   @Mod.EventHandler
@@ -125,18 +131,18 @@ public class SpiritedAway
     //SASchematics.init();
     SAAchievements.init();
     
-    //SADimension.init();
+    //SAWorld.initialization();
     
     proxy.registerEntityRenderers();
     proxy.registerModelBakeryStuff();
     proxy.initialization();
-
+    
   }
 
   @Mod.EventHandler
   public void postInit(FMLPostInitializationEvent event) 
   {
-
+	//proxy.preinitialization();
   }
 
   @Mod.EventHandler

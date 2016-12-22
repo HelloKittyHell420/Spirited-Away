@@ -17,6 +17,8 @@ public class ItemRendering
 {
   public static void initialize()
   {
+	register(SAItems.book, "book");  
+	  
     register(SAItems.pogo_bigger_blue, "record_pogo_bigger_blue");
     register(SAItems.dragon_boy, "record_dragon_boy");
     register(SAItems.dragon_boy, "record_dragon_boy2");

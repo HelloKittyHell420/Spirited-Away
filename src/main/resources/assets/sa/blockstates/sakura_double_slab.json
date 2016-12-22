@@ -1,0 +1,11 @@
+{
+    
+	"variants": 
+	{
+        
+		"half=bottom": { "model": "sa:planks/planks_sakura" },
+        			"half=top": { "model": "sa:planks/planks_sakura" }
+    
+	}
+
+}

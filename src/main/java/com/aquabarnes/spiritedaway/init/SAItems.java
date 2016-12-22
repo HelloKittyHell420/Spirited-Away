@@ -107,8 +107,8 @@ public class SAItems {
 	
     public static Item TRAIN;
     
-    //TODO:Skin Changer
-    public static Item BOOK;
+    //TODO:InfomationBook
+    public static Item book;
     
     public static SAItemSwapper Transport;
     
@@ -140,7 +140,9 @@ public class SAItems {
        //ELYTRA_KASHIRA = new ItemElytra("elytra_kashira");
        //ELYTRA_SOOTBALL = new ItemElytra("elytra_sootball"); 
        //TRAIN = new ItemTrain("train", 0, TrainType.NORMAL);
-       //BOOK = new ItemBook("book");
+    	
+    	
+       book = register("book", new ItemBook());
        
        //TODO: RECORDS
        pogo_bigger_blue = register("record_pogo_bigger_blue", new SAItemRecord("record_pogo_bigger_blue", SASoundEvents.pogo_bigger_blue, "Spirited Away", "Spirited Away"));

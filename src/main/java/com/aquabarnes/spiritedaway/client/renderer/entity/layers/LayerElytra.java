@@ -9,6 +9,7 @@ import net.minecraft.client.model.ModelElytra;
 import net.minecraft.client.renderer.GlStateManager;
 import net.minecraft.client.renderer.RenderItem;
 import net.minecraft.client.renderer.entity.RenderManager;
+import net.minecraft.client.renderer.entity.RenderPlayer;
 import net.minecraft.client.renderer.entity.layers.LayerArmorBase;
 import net.minecraft.client.renderer.entity.layers.LayerRenderer;
 import net.minecraft.entity.player.EnumPlayerModelParts;
@@ -28,16 +29,14 @@ public class LayerElytra implements LayerRenderer<AbstractClientPlayer>
     private static final ResourceLocation TEXTURE_ELYTRA_KASHIRA = new ResourceLocation("sa:textures/entity/elytra.png");
     private static final ResourceLocation TEXTURE_ELYTRA_SOOTBALL = new ResourceLocation("sa:textures/entity/elytra.png");
 
-    /** Instance of the player renderer. */
-    private final SARenderPlayer renderPlayer;
-    
-    /** The model used by the Elytra. */
+    private final RenderPlayer renderPlayer;
     private final ModelElytra modelElytra = new ModelElytra();
 
-	public LayerElytra(SARenderPlayer renderManager, ModelElytra modelElytra, int i) {
-		
-		super();
-	}
+	public LayerElytra(RenderPlayer renderPlayerIn)
+	  {
+	    this.renderPlayer = renderPlayerIn;
+	  }
+	  
 
 	public void doRenderLayer(AbstractClientPlayer entitylivingbaseIn, float limbSwing, float limbSwingAmount, float partialTicks, float ageInTicks, float netHeadYaw, float headPitch, float scale)
     {

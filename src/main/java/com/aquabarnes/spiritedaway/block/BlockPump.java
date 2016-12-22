@@ -37,11 +37,8 @@ public class BlockPump extends Block {
 	
     public BlockPump(String name, Material material, MapColor color)
     {
-        super(Material.wood); 
-        //this.setHardness(F)
+        super(Material.WOOD); 
         this.setUnlocalizedName(name);
-		//this.setRegistryName(name);
-        GameRegistry.registerBlock(this, name);
 		this.setDefaultState(this.blockState.getBaseState().withProperty(FACING, EnumFacing.NORTH));
 	}
     
@@ -123,7 +120,7 @@ public class BlockPump extends Block {
 	public static void setState(boolean active, World worldIn, BlockPos pos)
 	{
 		IBlockState iblockstate = worldIn.getBlockState(pos);
-	    worldIn.setBlockState(pos, SABlocks.SHRINE.getDefaultState().withProperty(FACING, iblockstate.getValue(FACING)), 3);
+	    worldIn.setBlockState(pos, SABlocks.shrine.getDefaultState().withProperty(FACING, iblockstate.getValue(FACING)), 3);
 		
 	    return;
 	}
@@ -148,7 +145,7 @@ public class BlockPump extends Block {
 
     public ItemStack getItem(World worldIn, BlockPos pos, IBlockState state)
     {
-        return new ItemStack(SABlocks.PUMP);
+        return new ItemStack(SABlocks.pump);
     }
 
     /**

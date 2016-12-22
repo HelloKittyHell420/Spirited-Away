@@ -1,0 +1,15 @@
+{
+    
+	"parent": "block/half_slab",
+    
+	"textures": {
+        
+		"bottom": "sa:blocks/planks/planks_sakura",
+        
+		"top": "sa:blocks/planks/planks_sakura",
+        
+		"side": "sa:blocks/planks/planks_sakura"
+    
+	}
+
+}

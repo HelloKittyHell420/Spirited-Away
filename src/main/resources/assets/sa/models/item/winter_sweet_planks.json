@@ -1,5 +1,5 @@
 {
-    "parent":"sa:block/planks_winter_sweet",
+    "parent":"sa:block/planks/planks_winter_sweet",
     "display": {
         "thirdperson": {
             "rotation": [ 10, -45, 170 ],

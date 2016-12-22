@@ -1,5 +1,5 @@
 {
-    "parent":"sa:block/planks_acer_palmatum",
+    "parent":"sa:block/planks/acer_palmatum_planks",
     "display": {
         "thirdperson": {
             "rotation": [ 10, -45, 170 ],
